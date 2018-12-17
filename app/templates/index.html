@@ -1,0 +1,101 @@
+'{% extends 'base.html' %}
+
+{% block title %}{{ super() }} - Dashboard{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+
+	<title></title>
+	<meta charset="utf-8">
+	 <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	 <link href="{{ url_for('static', filename='css/carrossel.css') }}" rel="stylesheet">
+
+    <div class="container">
+        
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+        	<div class="item active">
+        		<img src="{{ url_for('static', filename='img/maxresdefault.jpg') }}" class="first-slide">
+        		<div class="container">
+        			<div class="carousel-caption">
+        				<h1>Boys' love: The unstoppable rise of same-sex soapies in Thailand</h1>
+                        <a href="http://www.abc.net.au/radionational/programs/latenightlive/together-with-me/9859900"tabindex="1" role="button">Link
+                        </a>
+        				
+        			</div><!-- carousel-caption-->
+        		</div><!-- container-->
+        	</div><!-- item active-->
+        	<div class="item">
+        		<img src="{{ url_for('static', filename='img/lovesick2.jpg') }}" class="second-slide">
+        		<div class="container">
+        			<div class="carousel-caption">
+        				<h1>Boys in Love</h1>
+                        <a href="https://www.newyorker.com/culture/culture-desk/boys-in-love" tabindex="2" role="button">Link</a>
+        				
+        			</div><!-- carousel-caption-->
+        		</div><!-- container-->
+        	</div><!-- item active-->
+        	<div class="item">
+        		<img src="{{ url_for('static', filename='img/hq.jpg') }}" class="third-slide">
+        		<div class="container">
+        			<div class="carousel-caption">
+        				<h1>Homem gelo tem 1ª noite gay nos quadrinhos do X-Men Gold<h1>
+        				<a href="https://poenaroda.com.br/pop/homem-gelo-tem-1a-noite-gay-nos-quadrinhos-do-x-men-gold/" tabindex="3" role="button">Link</a>
+        			</div><!--carousel-caption-->
+        		</div><!-- container-->
+        	</div><!-- item active-->
+        	</div>
+        </div><!--- carousel-inner -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		</a>
+
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		</a>
+	</div>
+</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<div class="jumbotron text-center">
+  <h1>Notícias que podem interessar</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="thumbnail">
+            <img src="{{ url_for('static', filename='img/india.jpg') }}" class="third-slide">
+            <h1>Índia despenaliza a homossexualidade</h1>
+            <p>Cinco juízes da Suprema Corte da Índia decidiram por unanimidade despenalizar a homossexualidade entre pessoas adultas no país asiático. A histórica sentença desta quinta-feira, 6, estabelece que “as relações sexuais entre adultos homossexuais em privado não constituem um delito”, e que qualquer norma que persiga essas práticas é “discriminatória e uma violação dos princípios constitucionais”.</p>
+            <a href="{{ url_for('noticia')}}" tabindex="1" role="button">Link</a>
+        </div>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="thumbnail">
+            <img src="{{ url_for('static', filename='img/india3.jpeg') }}" class="third-slide">
+            <h1>Buzz Lightyear e Woody se casaram em uma festa épica com fantasias da Disney</h1>
+            <p>Notícia importante: Buzz Lightyear passou seu laser de modo ataque para modo amor. E se casou com Woody!
+            Jason Bitner e Garrett Smith, de Chicago, são fãs enormes da Disney. Por isso, quando se casaram, em outubro, decidiram que a festa seria baseada no tema "Disney".</p>
+            <a href="{{ url_for('noticia2')}}" tabindex="1" role="button">Link</a>
+        </div>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="thumbnail">
+            <img src="{{ url_for('static', filename='img/india2.jpg') }}" class="third-slide">
+            <h1>5 reflexões que você deveria ler sobre LGBTIfobia online</h1>
+            <p>Porque o fim da violência contra a população LGBTI também é uma responsabilidade sua.</p>
+            <a href=""{{ url_for('noticia3')}}"" tabindex="1" role="button">Link</a>
+        </div>
+    </div>
+  </div>
+</div> 	
+
+{% endblock %}
